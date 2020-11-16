@@ -1,0 +1,75 @@
+.header
+    max-width: 1230px
+    margin: 30px auto
+
+.header-nav
+    display: flex
+    justify-content: space-between
+
+.header-block1__link
+    font-family: 'MuseoSans-500', Sans-serif
+    text-decoration: none
+    color: $text-color-hover
+
+.header-block1__logo
+    font-family: 'MuseoModerno-Light', sans-serif
+    color: $text-color
+
+.header-block1__text
+    position: relative
+    display: inline-block
+    margin-right: 10px
+    padding-right: 10px
+    letter-spacing: .12em
+    &::after
+        position: absolute
+        display: inline-block
+        right: 0
+        bottom: 3px
+        width: 1px
+        height: 70%
+        content: ''
+        background: $text-color-hover
+        opacity: .5
+
+.header-block2__link
+    position: relative
+    display: inline-block
+    font-family: 'MuseoSans-300'
+    font-size: 19px
+    text-decoration: none
+    color: $text-color
+    margin-right: 22px
+    letter-spacing: normal
+    &:hover
+        color: $text-color-hover
+        font-weight: normal
+        &::after
+            display: block
+
+    &::after
+        position: absolute
+        width: 100%
+        display: none
+        bottom: -4px
+        content: ''
+        height: 1px
+        background: $text-color-hover
+
+.phone
+    color: $text-color-hover
+    text-decoration: none
+    font-size: 20px
+    &:hover
+        font-weight: bold
+
+.phone-icon
+    width: 14px
+    height: 14px
+    margin-right: 8px
+
+hr
+    width: 100%
+    height: 1px
+    border: none
+    background: $hr-color
