@@ -15,36 +15,139 @@
       <!-- обертка для всего контента сайта -->
       <header class="header">
         <!-- обертка для секции header -->
-        <nav class="header-nav">
-          <!-- обертка для 3 блоков в шапке сайта -->
-          <div class="header-block1">
-            <a href="#" class="header-block1__link"
-              ><span class="header-block1__text">FD</span>
-              <span class="header-block1__logo"> fasad-decor</span></a
-            >
-          </div>
-          <!-- логотип сайта -->
+        <div class="header-menu">
+          <nav class="header-nav">
+            <!-- обертка для 3 блоков в шапке сайта -->
+            <div class="header-block1">
+              <a href="#" class="header-block1__link"
+                ><span class="header-block1__text">FD</span>
+                <span class="header-block1__logo"> fasad-decor</span></a
+              >
+            </div>
+            <!-- логотип сайта -->
 
-          <div class="header-block2">
-            <!-- Меню навигации -->
-            <a href="#" class="header-block2__link">Акции</a>
-            <a href="#" class="header-block2__link">О производстве</a>
-            <a href="#" class="header-block2__link">Отзывы</a>
-            <a href="#" class="header-block2__link">Каталог</a>
-            <a href="#" class="header-block2__link">Контакты</a>
+            <div class="header-block2">
+              <!-- Меню навигации -->
+              <a href="#" class="header-block2__link">Акции</a>
+              <a href="#" class="header-block2__link">О производстве</a>
+              <a href="#" class="header-block2__link">Отзывы</a>
+              <a href="#" class="header-block2__link">Каталог</a>
+              <a href="#" class="header-block2__link">Контакты</a>
+            </div>
+            <!-- Телефон для связи -->
+            <div class="header-block3">
+              <a href="tel:+79050224000" class="phone">
+                <svg class="phone-icon">
+                  <use xlink:href="img/icons.svg#phone"></use>
+                </svg>
+                8 800 300 00</a
+              >
+            </div>
+          </nav>
+        </div>
+        <hr class="hr hr-mb" />
+        <!-- Блок слайдера -->
+        <div class="hero">
+          <div class="slider">
+            <div class="arrow-left">
+              <a href="#" class="arrow-left__link">
+                <img
+                  class="arrow-left__img"
+                  src="img/slider/left-arrow.png"
+                  alt="<"
+                />
+              </a>
+            </div>
+            <div class="slider-left">
+              <!-- Левая сторона слайдера -->
+              <h1 class="h1-title">
+                Изготовление и установка элементов фасадного декора
+              </h1>
+              <p class="p-text">
+                Часто возникает необходимость оформить различные части здания
+                при помощи фасадного декора из пенопласта. Мы стараемся
+                обеспечить разнообразие декора для отделки фасадов.
+              </p>
+
+              <div class="btn">
+                <a href="#" class="btn__link">Заказать звонок</a>
+              </div>
+            </div>
+            <div class="slider-right">
+              <!-- Правая сторона слайдера -->
+              <img
+                src="img/slider/slider-1.png"
+                width="700px"
+                alt=""
+                class="slider-img"
+              />
+            </div>
+            <div class="arrow-right">
+              <a href="#" class="arrow-right__link">
+                <img
+                  class="arrow-right__img"
+                  src="img/slider/right-arrow.png"
+                  alt=">"
+                />
+              </a>
+            </div>
           </div>
-          <!-- Телефон для связи -->
-          <div class="header-block3">
-            <a href="tel:+79050224000" class="phone">
-              <svg class="phone-icon">
-                <use xlink:href="img/icons.svg#phone"></use>
-              </svg>
-              8 800 300 00</a
-            >
+          <div class="slider-nav">
+            <!-- кнопки навигации для слайдера -->
+            <ul class="slider-circle">
+              <li class="slider-circle__item">
+                <a href="#" class="slider-nav__link">
+                  <svg class="slider-circle__svg">
+                    <use xlink:href="img/icons.svg#slider"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="slider-circle__item">
+                <a href="#" class="slider-nav__link">
+                  <svg class="slider-circle__svg">
+                    <use xlink:href="img/icons.svg#sliderhover"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="slider-circle__item">
+                <a href="#" class="slider-nav__link">
+                  <svg class="slider-circle__svg">
+                    <use xlink:href="img/icons.svg#slider"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="slider-circle__item">
+                <a href="#" class="slider-nav__link">
+                  <svg class="slider-circle__svg">
+                    <use xlink:href="img/icons.svg#slider"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
-        </nav>
+        </div>
+        <div class="steps">
+          <!-- Преимущества 1 2 3 -->
+          <div class="steps-block">
+            <!-- выезд -->
+            <div class="steps-block__number">1</div>
+            <div class="steps-block__text">24 часа на выезд замерщика</div>
+          </div>
+          <div class="steps-block">
+            <!-- монтаж -->
+            <div class="steps-block__number">2</div>
+            <div class="steps-block__text">качественный и быстрый монтаж</div>
+          </div>
+          <div class="steps-block">
+            <!-- изготовление -->
+            <div class="steps-block__number">3</div>
+            <div class="steps-block__text">
+              от 48 часов на изготовление элементов
+            </div>
+          </div>
+        </div>
+        <hr class="hr hr-mb" />
       </header>
-      <hr />
     </div>
   </body>
 </html>

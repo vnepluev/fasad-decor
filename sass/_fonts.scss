@@ -11,7 +11,7 @@
     url("../fonts/MuseoSansCyrl-100.eot?#iefix") format("embedded-opentype"),
     url("../fonts/MuseoSansCyrl-100.ttf") format("truetype");
   font-display: block;
-  font-weight: 300;
+  font-weight: 100;
   font-style: normal;
 }
 @font-face {
@@ -28,7 +28,7 @@
 }
 @font-face {
   font-family: "MuseoSans-500";
-  src: local("MuseoSansCyrl-300"),
+  src: local("MuseoSansCyrl-500"),
     url("../fonts/MuseoSansCyrl-500.woff2") format("woff2"),
     url("../fonts/MuseoSansCyrl-500.woff") format("woff"),
     url("../fonts/MuseoSansCyrl-500.eot?") format("eot"),
@@ -43,8 +43,9 @@
 //
 @font-face {
   font-family: "MuseoModerno-Regular";
-  src: local("MuseoModerno-Regular"),
-    url("../fonts/MuseoModerno-Regular.woff2") format("woff2"),
+  src: local("Museo Moderno Regular"),
+    local("Museo-Moderno-Regular") url("../fonts/MuseoModerno-Regular.woff2")
+      format("woff2"),
     url("../fonts/MuseoModerno-Regular.woff") format("woff"),
     url("../fonts/MuseoModerno-Regular.eot?") format("eot"),
     url("../fonts/MuseoModerno-Regular.eot?#iefix") format("embedded-opentype"),
@@ -55,7 +56,7 @@
 }
 @font-face {
   font-family: "MuseoModerno-Light";
-  src: local("MuseoModerno-Light"),
+  src: local("Museo Moderno Light"), local("Museo-Moderno-Light"),
     url("../fonts/MuseoModerno-Light.woff2") format("woff2"),
     url("../fonts/MuseoModerno-Light.woff") format("woff"),
     url("../fonts/MuseoModerno-Light.eot?") format("eot"),
@@ -63,6 +64,18 @@
     url("../fonts/MuseoModerno-Light.ttf") format("truetype");
   font-display: block;
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MuseoModerno-Medium";
+  src: local("Museo-Moderno-Medium"),
+    url("../fonts/MuseoModerno-Medium.woff2") format("woff2"),
+    url("../fonts/MuseoModerno-Medium.woff") format("woff"),
+    url("../fonts/MuseoModerno-Medium.eot?") format("eot"),
+    url("../fonts/MuseoModerno-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MuseoModerno-Medium.ttf") format("truetype");
+  font-display: block;
+  font-weight: 500;
   font-style: normal;
 }
 
