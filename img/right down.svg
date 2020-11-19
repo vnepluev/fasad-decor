@@ -1,0 +1,6 @@
+<svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <symbol xmlns="http://www.w3.org/2000/svg" id="left-arrow">
+        <path d="M6.25 9.875L9.375 13L12.5 9.875" stroke="#D6B47E" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.5 3H6.875C7.53804 3 8.17393 3.26339 8.64277 3.73223C9.11161 4.20107 9.375 4.83696 9.375 5.5V13" stroke="#D6B47E" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>

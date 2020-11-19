@@ -1,5 +1,4 @@
-.wrapper
-    max-width: 1565px
+.m-a
     margin: auto
 
 // .section
@@ -9,38 +8,35 @@
     margin-bottom: 20px
 
 .header
-    max-width: 1296px
     margin: 30px auto
+    &-nav
+        display: flex
+        justify-content: space-between
 
-.header-nav
-    display: flex
-    justify-content: space-between
-
-.header-block1__link
-    font-family: 'MuseoSans-500', Sans-serif
-    text-decoration: none
-    color: $text-color-hover
-
-.header-block1__logo
-    font-family: 'MuseoModerno-Light', sans-serif
-    color: $text-color
-
-.header-block1__text
-    position: relative
-    display: inline-block
-    margin-right: 10px
-    padding-right: 10px
-    letter-spacing: .12em
-    &::after
-        position: absolute
+.header-block1
+    &__link
+        font-family: 'MuseoSans-500', Sans-serif
+        text-decoration: none
+        color: $text-color-hover
+    &__logo
+        font-family: 'MuseoModerno-Light', sans-serif
+        color: $text-color
+    &__text
+        position: relative
         display: inline-block
-        right: 0
-        bottom: 3px
-        width: 1px
-        height: 70%
-        content: ''
-        background: $text-color-hover
-        opacity: .5
+        margin-right: 10px
+        padding-right: 10px
+        letter-spacing: .12em
+        &::after
+            position: absolute
+            display: inline-block
+            right: 0
+            bottom: 3px
+            width: 1px
+            height: 70%
+            content: ''
+            background: $text-color-hover
+            opacity: .5
 
 .header-block2__link
     position: relative
@@ -54,11 +50,10 @@
     &:hover
         color: $text-color-hover
         font-weight: normal
-        transition: 0.3s
+        transition: 0.6s
         &::after
             display: block
             // transition: all 1.2s ease-in-out 0s
-
     &::after
         display: none
         position: absolute
@@ -77,7 +72,7 @@
     letter-spacing: 0.05em
     &:hover
         font-weight: bold
-        transition: 0.3s
+        transition: 0.6s
 
 .phone-icon
     width: 14px
@@ -141,12 +136,17 @@
             &:last-child
                 padding-right: 0px
 
-.arrow-left
-    position: relative
-    left: -60px
-.arrow-right
-    position: relative
-    left: 20px
+.arrow
+    &-left
+        position: relative
+        left: -60px
+        // &__img
+        //     &:hover
+        //         stroke: red
+        // сюда вставить анимацию при наведении на стрелку слайдера
+    &-right
+        position: relative
+        left: 20px
 
 .steps
     display: flex

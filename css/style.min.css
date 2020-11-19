@@ -401,13 +401,21 @@ body {
   color: #CACAC9;
 }
 
+.wrapper {
+  max-width: 1565px;
+  margin: auto;
+}
+
+.content-size {
+  max-width: 1296px;
+}
+
 .h1-title {
   font-size: 30px;
   line-height: 48px;
   letter-spacing: 0.038em;
   color: #ECECEC;
   font-family: 'MuseoSans-500', sans-serif;
-  font-style: normal;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -416,6 +424,10 @@ body {
   font-size: 25px;
   line-height: 48px;
   letter-spacing: 0.038em;
+  color: #ECECEC;
+  font-family: 'MuseoSans-500', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
 }
 
 .h3-title {
@@ -434,8 +446,11 @@ body {
   font-weight: normal;
 }
 
-.wrapper {
-  max-width: 1565px;
+.span-color {
+  color: #D6B47E;
+}
+
+.m-a {
   margin: auto;
 }
 
@@ -444,7 +459,6 @@ body {
 }
 
 .header {
-  max-width: 1296px;
   margin: 30px auto;
 }
 
@@ -504,9 +518,9 @@ body {
 .header-block2__link:hover {
   color: #D6B47E;
   font-weight: normal;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .header-block2__link:hover::after {
@@ -534,9 +548,9 @@ body {
 
 .phone:hover {
   font-weight: bold;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
+  transition: 0.6s;
 }
 
 .phone-icon {
@@ -711,4 +725,8 @@ body {
   background-color: #1a1a1a;
   color: #CACAC9;
   z-index: 0;
+}
+
+.production {
+  margin-top: 60px;
 }

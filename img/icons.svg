@@ -26,4 +26,9 @@
         <rect width="5" height="5" rx="2.5" transform="matrix(1 0 0 -1 5 10)" fill="#1A1A1A"/>
         <path d="M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM0.13523 7.5C0.13523 11.5675 3.43255 14.8648 7.5 14.8648C11.5675 14.8648 14.8648 11.5675 14.8648 7.5C14.8648 3.43255 11.5675 0.13523 7.5 0.13523C3.43255 0.13523 0.13523 3.43255 0.13523 7.5Z" fill="#D6B47E" fill-opacity="0.5"/>
     </symbol>
+
+    <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-down" width="15" height="16" viewBox="0 0 15 16" fill="none">
+        <path d="M6.25 9.875L9.375 13L12.5 9.875" stroke="#D6B47E" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M2.5 3H6.875C7.53804 3 8.17393 3.26339 8.64277 3.73223C9.11161 4.20107 9.375 4.83696 9.375 5.5V13" stroke="#D6B47E" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>
