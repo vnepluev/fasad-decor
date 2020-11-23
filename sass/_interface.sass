@@ -13,6 +13,16 @@ body
 .content-size
     max-width: 1296px
 
+// пока оставим так, далее заменим
+// на плагин js иначе в FireFox не работает
+::-webkit-scrollbar
+    background: $scrollbar-color
+    border-radius: 2px
+    width: 5px
+    &-thumb
+        background: $text-color-hover
+        border-radius: 2px
+
 .h1-title
     font-size: 30px
     line-height: 48px
@@ -44,6 +54,14 @@ body
     letter-spacing: 0.032em
     font-style: normal
     font-weight: normal
+
+.p-text-big
+    font-family: MuseoSans-500, sans-serif
+    color: $text-color
+    line-height: 24px
+    font-size: 17px
+    letter-spacing: 0.05em
+    text-transform: uppercase
 
 .span-color
     color: $text-color-hover

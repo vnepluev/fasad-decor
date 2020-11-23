@@ -1,0 +1,37 @@
+.project
+    margin: 67px auto
+
+.project-slider
+    margin-top: 59px
+    &-top
+        position: relative
+        display: flex
+        justify-content: space-between
+        margin-bottom: 59px
+        min-width: 1113px
+    &__img
+        border-radius: 10px
+        &:hover
+            filter: drop-shadow(0px 0px 22px rgba(214, 180, 126, 0.51))
+            cursor: pointer
+    &__arrow
+        &-left
+            top: 35px
+        &-right
+            top: 35px
+    &-bottom
+        display: flex
+        justify-content: space-between
+        margin-bottom: 70px
+    &-left__img
+        border-radius: 10px
+    &__text
+        padding: 20px 10px 20px 127px
+
+// затемнение у текста "выполненные проекты"
+.project-slider
+    &__right
+        position: relative
+        padding-right: 20px
+        overflow-y: auto
+        max-height: 400px

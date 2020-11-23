@@ -1,0 +1,68 @@
+.catalog
+    margin: 67px auto
+
+.catalog-items
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+    margin-bottom: 65px
+    &--margin
+        margin-top: 59px
+    &__block
+        width: 350px
+        padding: 56px 41px
+        margin: 0 30px 30px 0
+        border-radius: 10px
+        background: $bg-catalog-color
+        &:hover
+            filter: drop-shadow(0px 0px 22px rgba(214, 180, 126, 0.51))
+    &__link
+        text-decoration: none
+    &__text
+        display: flex
+        margin-top: 45px
+        flex-wrap: no-wrap
+        padding-left: 20px
+    &__svg
+        min-width: 28px
+        width: 28px
+        height: 24px
+        margin-right: 20px
+
+.catalog
+    &-email
+        text-align: center
+        margin-bottom: 46px
+    &-form
+        text-align: center
+        margin-bottom: 71px
+        &__btn
+            margin-left: -50px
+            font-family: 'MuseoSans-500', sans-serif
+            font-size: 15px
+            letter-spacing: 0.05em
+            background: $background-color
+            border: $text-color-hover 1px solid
+            color: $text-color-hover
+            padding: 15px 47px
+            border-radius: 50px
+            text-transform: uppercase
+            outline: none
+            &:hover
+                filter: drop-shadow(0px 0px 22px rgba(214, 180, 126, 0.51))
+            &:active
+                background: $btn-focus-textcolor
+                color: $btn-hover-textcolor
+        &__input
+            width: 40%
+            font-family: 'MuseoSans-100', sans-serif
+            font-size: 16px
+            letter-spacing: 0.05em
+            border-radius: 50px
+            background: none
+            padding: 14px 39px
+            border: $text-color-hover 1px solid
+            color: $text-color-hover
+            &:focus
+                outline: none

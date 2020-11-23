@@ -31,4 +31,9 @@
         <path d="M6.25 9.875L9.375 13L12.5 9.875" stroke="#D6B47E" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M2.5 3H6.875C7.53804 3 8.17393 3.26339 8.64277 3.73223C9.11161 4.20107 9.375 4.83696 9.375 5.5V13" stroke="#D6B47E" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+
+    <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-white" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M5 12H19" stroke="#CACAC9" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 5L19 12L12 19" stroke="#CACAC9" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>
