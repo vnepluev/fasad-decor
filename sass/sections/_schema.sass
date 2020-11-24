@@ -1,2 +1,52 @@
 .schema
     margin: 67px auto
+    &-section
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 59px
+    &-callme
+        margin: 65px auto 41px
+    &--btn
+        margin-bottom: 67px
+        text-align: center
+
+.schema-section
+    &--title
+        text-align: center
+    &__block1
+        width: 254px
+        padding: 30px 45px
+        background: $bg-catalog-color
+        border-radius: 10px
+    &__block2
+        width: 31px
+        height: 7px
+        background: $bg-catalog-color
+    &__block3
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 60%
+        background: $bg-catalog-color
+        border-radius: 10px
+        padding: 30px 45px
+    &__sub-blocks
+        position: relative
+        width: 24%
+        text-align: center
+        &:last-child
+            &::after
+                display: none
+        &::after
+            content: ''
+            position: absolute
+            right: -5%
+            top: 49%
+            min-width: 20px
+            min-height: 2px
+            background: $text-color-hover
+    &__text
+        font-size: 14px
+        line-height: 16px
+        margin-top: 5px

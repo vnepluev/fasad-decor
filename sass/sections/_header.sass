@@ -91,23 +91,24 @@
 .btn
     margin-top: 57px
     &__link
+        display: inline-block
         font-family: 'MuseoSans-500', sans-serif
         letter-spacing: 0.1em
         border: 1px solid $text-color-hover
         border-radius: 50px
-        padding: 20px 64px
+        padding: 15px 54px
         text-decoration: none
         color: $text-color-hover
         &:hover
             background-color: $btn-background-hover
             box-shadow: 0px 0px 30px $btn-hover-boxshadow
-            border: none
             color: $btn-hover-textcolor
             transition: 0.6s
         &:focus
             background: $btn-focus-textcolor
 
 .slider
+    width: 100%
     position: relative
     display: flex
     align-items: center
