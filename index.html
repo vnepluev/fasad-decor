@@ -51,7 +51,7 @@
         <!-- Блок слайдера -->
         <div class="hero">
           <div class="slider">
-            <div class="arrow-left">
+            <!-- <div class="arrow-left">
               <a href="#" class="arrow-left__link">
                 <img
                   class="arrow-left__img"
@@ -59,7 +59,7 @@
                   alt="<"
                 />
               </a>
-            </div>
+            </div> -->
             <div class="slider-left">
               <!-- Левая сторона слайдера -->
               <h1 class="h1-title">
@@ -73,7 +73,9 @@
               </p>
 
               <div class="btn">
-                <a href="#" class="btn__link">Заказать звонок</a>
+                <a href="#" class="btn__link" id="callback-btn"
+                  >Заказать звонок</a
+                >
               </div>
             </div>
             <div class="slider-right">
@@ -85,7 +87,7 @@
                 class="slider-img"
               />
             </div>
-            <div class="arrow-right">
+            <!-- <div class="arrow-right">
               <a href="#" class="arrow-right__link">
                 <img
                   class="arrow-right__img"
@@ -93,7 +95,7 @@
                   alt=">"
                 />
               </a>
-            </div>
+            </div> -->
           </div>
 
           <!-- навигация слайдера -->
@@ -552,8 +554,9 @@
               minlength="6"
               maxlength="254"
               class="catalog-form__input"
+              required
             />
-            <input type="button" class="catalog-form__btn" value="Отправить" />
+            <input type="submit" class="catalog-form__btn" value="Отправить" />
           </form>
         </div>
 
@@ -666,7 +669,9 @@
         </div>
 
         <div class="btn schema--btn">
-          <a href="#" class="btn__link">Заказать обратный звонок</a>
+          <a href="#" id="callback-btn1" class="btn__link"
+            >Заказать обратный звонок</a
+          >
         </div>
 
         <hr class="hr hr-mb" />
@@ -742,14 +747,17 @@
               </div>
               <div class="footer-right__block">
                 <!-- Telegram -->
-                <a href="https://qna.habr.com/q/310003" class="footer__link">
+                <a href="https://t-do.ru/username" class="footer__link">
                   <svg class="footer-right__svg">
                     <use xlink:href="img/icons.svg#telegram"></use>
                   </svg>
                   Telegram
                 </a>
                 <!-- WhatsApp -->
-                <a href="https://whatsapp.com" class="footer__link1">
+                <a
+                  href="https://api.whatsapp.com/send?phone=79050224000"
+                  class="footer__link1"
+                >
                   <svg class="footer-right__svg1">
                     <use xlink:href="img/icons.svg#whatsapp"></use>
                   </svg>
@@ -773,9 +781,54 @@
       </footer>
     </div>
 
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+      <div class="popup">
+        <a href="#" id="btn-modal-close" class="h1-title popup__close"
+          >&times;</a
+        >
+        <div class="popup-content">
+          <div class="popup-content__left">
+            <img src="img/modal/operator.jpg" alt="" class="popup__img" />
+          </div>
+          <div class="popup-content__right">
+            <p class="p-text-modal">
+              <span class="span-color">Заказажите</span> обратный звонок и мы
+              перезвоним вам в течении <span class="span-color">5</span> минут!
+            </p>
+            <form action="#" method="post" class="popup-form">
+              <input
+                class="form__input popup-form--input"
+                type="text"
+                name="client-name"
+                placeholder="Ваше имя"
+                minlength="3"
+                maxlength="128"
+                required
+              />
+              <input
+                class="form__input popup-form--input"
+                type="tel"
+                name="client-phone"
+                placeholder="Телефон для связи"
+                minlength="6"
+                maxlength="30"
+                required
+              />
+              <input
+                type="submit"
+                class="form__btn popup-form--btn"
+                value="Перезвоните мне"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Подключаем скрипты -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/slick.min.js"></script>
-    <!-- <script src="js/init.js"></script> -->
+    <script src="js/init.js"></script>
   </body>
 </html>

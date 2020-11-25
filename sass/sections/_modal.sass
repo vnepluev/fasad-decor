@@ -1,0 +1,45 @@
+.modal
+    // display: flex
+    display: none
+    position: fixed
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(202, 202, 201, 0.55)
+    &-active
+        display: flex
+
+.popup
+    display: flex
+    position: relative
+    margin: auto
+    background: $background-color
+    border-radius: 20px
+    width: 1200px
+    padding: 83px 61px
+    &__close
+        position: absolute
+        top: 20px
+        right: 40px
+        text-decoration: none
+        &:hover
+            color: $text-color-hover
+    &__img
+        border-radius: 20px
+
+.popup-content
+    width: 100%
+    display: flex
+    &__right
+        padding: 0 61px 0 99px
+        background: url('../img/slider-bg.png') center center no-repeat
+        background-size: contain
+
+.popup-form
+    margin-top: 38px
+    &--input
+        width: 350px
+        margin-bottom: 11px
+    &--btn
+        margin-top: 34px
