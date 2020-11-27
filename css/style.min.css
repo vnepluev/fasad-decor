@@ -1177,6 +1177,7 @@ body {
   background: #282828;
   -webkit-border-radius: 10px;
           border-radius: 10px;
+  cursor: default;
 }
 
 .schema-section__block2 {
@@ -1209,6 +1210,7 @@ body {
   position: relative;
   width: 24%;
   text-align: center;
+  stroke: #282828;
 }
 
 .schema-section__sub-blocks:last-child::after {
@@ -1225,10 +1227,17 @@ body {
   background: #D6B47E;
 }
 
+.schema-section__sub-blocks:hover {
+  stroke: #D6B47E;
+  color: #D6B47E;
+  stroke-width: 0.1;
+}
+
 .schema-section__text {
   font-size: 14px;
   line-height: 16px;
   margin-top: 5px;
+  cursor: default;
 }
 
 .footer {
@@ -1307,6 +1316,10 @@ body {
 
 .footer-bottom__link:hover {
   color: #D6B47E;
+}
+
+.footer__map {
+  border: none;
 }
 
 .modal {

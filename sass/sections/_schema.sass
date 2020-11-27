@@ -19,6 +19,7 @@
         padding: 30px 45px
         background: $bg-catalog-color
         border-radius: 10px
+        cursor: default
     &__block2
         width: 31px
         height: 7px
@@ -35,6 +36,7 @@
         position: relative
         width: 24%
         text-align: center
+        stroke: #282828
         &:last-child
             &::after
                 display: none
@@ -46,7 +48,12 @@
             min-width: 20px
             min-height: 2px
             background: $text-color-hover
+        &:hover
+            stroke: $text-color-hover
+            color: $text-color-hover
+            stroke-width: 0.1
     &__text
         font-size: 14px
         line-height: 16px
         margin-top: 5px
+        cursor: default
