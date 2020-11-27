@@ -510,6 +510,7 @@ body {
           border-radius: 50px;
   text-transform: uppercase;
   outline: none;
+  text-decoration: none;
 }
 
 .form__btn:hover {
@@ -892,37 +893,7 @@ body {
   margin: 32px auto 48px;
 }
 
-.btn-light {
-  display: inline-block;
-  font-family: 'MuseoSans-500', sans-serif;
-  letter-spacing: 0.1em;
-  border: 1px solid #D6B47E;
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
-  padding: 10px 25px;
-  text-decoration: none;
-  color: #D6B47E;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.btn-light:hover {
-  background-color: #CEAD77;
-  -webkit-box-shadow: 0px 0px 30px rgba(214, 180, 126, 0.4);
-          box-shadow: 0px 0px 30px rgba(214, 180, 126, 0.4);
-  color: #1A1A1A;
-  -webkit-transition: 0.6s;
-  -o-transition: 0.6s;
-  transition: 0.6s;
-}
-
-.btn-light:hover:focus {
-  background: #A48D68;
-}
-
-.btn-light__svg {
+.production-button__svg {
   width: 15px;
   height: 16px;
 }
@@ -1051,7 +1022,7 @@ body {
 
 .catalog-items__block {
   width: 350px;
-  padding: 56px 41px;
+  padding: 41px;
   margin: 0 30px 30px 0;
   -webkit-border-radius: 10px;
           border-radius: 10px;
