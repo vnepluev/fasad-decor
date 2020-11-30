@@ -1,10 +1,10 @@
 $(document).ready(function(){
-  //   $('.slick-slider').slick({
-  //       slidesToShow: 1,
-  //       slidesToScroll: 1,
-  //       prevArrow: $('.arrow-left__link'),
-  //       nextArrow: $('.arrow-right__link')
-  // });
+    // $('.slider').slick({
+    //    slidesToShow: 1,
+    //    slidesToScroll: 1,
+    //    prevArrow: $('.arrow-left'),
+    //    nextArrow: $('.arrow-right')
+    // });
 
   let btnModal = document.querySelector('#callback-btn');
   let btnModal1 = document.querySelector('#callback-btn1');
@@ -25,12 +25,30 @@ $(document).ready(function(){
   btnClose.addEventListener('click', function () {
     modal.classList.remove('modal-active');
   })
-
   $(document).keydown(function(e) {
     if (e.keyCode === 27) {
       modal.classList.remove('modal-active');
       e.stopPropagation();
 		}
   });
+
+  //
+  // Слайдер для главной страницы
+  //
+
+  let sliderIndex = 0;
+  const slides = document.querySelectorAll('.slider__items');
+
+  setInterval(function() {
+
+    slides[sliderIndex].classList.remove('slider__items--visible');
+    sliderIndex++;
+
+    if (sliderIndex+1 > slides.length) {
+      sliderIndex = 0;
+    } 
+    slides[sliderIndex].classList.add('slider__items--visible');
+    
+  }, 6000);
 
 });

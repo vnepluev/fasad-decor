@@ -107,47 +107,6 @@
         &:focus
             background: $btn-focus-textcolor
 
-.slider
-    position: relative
-    display: flex
-    align-items: center
-    margin: 75px auto 60px auto
-    background: url('../img/slider-bg.png') left center no-repeat
-    &-left
-        position: relative
-        left: -40px
-        min-width: 550px
-    &-right
-        position: relative
-        left: 5px
-    &-nav
-        display: flex
-        justify-content: center
-        margin-bottom: 60px
-    &-circle
-        display: flex
-        flex-wrap: nowrap
-        list-style: none
-        &__svg
-            width: 15px
-            height: 15px
-        &__item
-            padding-right: 26px
-            &:last-child
-                padding-right: 0px
-
-.arrow
-    &-left
-        position: relative
-        left: -60px
-        // &__img
-        //     &:hover
-        //         stroke: red
-        // сюда вставить анимацию при наведении на стрелку слайдера
-    &-right
-        position: relative
-        left: 20px
-
 .steps
     display: flex
     justify-content: space-between
@@ -183,3 +142,67 @@
             background-color: $background-color
             color: $text-color
             z-index: 0
+
+.arrow
+    &-left
+        position: absolute
+        content: ''
+        left: -2%
+        top: 46%
+        transform: translate(-70%, -100%)
+    &-right
+        position: absolute
+        content: ''
+        right: -2%
+        top: 46%
+        transform: translate(70%, -100%)
+
+.hero
+    margin: 78px 0 0
+    position: relative
+    display: flex
+    min-height: 558px
+    &__right
+    &__left
+        min-height: 400px
+        background: url('../img/slider-bg.png') left center no-repeat
+
+.slider-container
+    position: relative
+    width: 100%
+
+.slider
+    list-style: none
+    display: flex
+    justify-content: space-between
+    padding: 0
+    flex-direction: column
+    &-nav
+        display: flex
+        justify-content: center
+        margin-bottom: 60px
+    &__items
+        position: absolute
+        top: 0
+        left: 0
+        display: flex
+        align-items: center
+        opacity: 0
+        transition: opacity 1s
+        &--visible
+            opacity: 1
+
+.slider
+    &-circle
+        display: flex
+        flex-wrap: nowrap
+        list-style: none
+        &__svg
+            width: 15px
+            height: 15px
+            &--active
+                display: none
+        &__item
+            padding-right: 26px
+            &:last-child
+                padding-right: 0px
