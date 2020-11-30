@@ -46,7 +46,6 @@ $(document).ready(function(){
   slidesCircle[0].style.display = 'none';
 
   setInterval(function() {
-
     slides[sliderIndex].classList.remove('slider__items--visible');
     slidesCircleActive[sliderIndex].style.display = 'none';
     slidesCircle[sliderIndex].style.display = 'flex';
@@ -62,5 +61,25 @@ $(document).ready(function(){
     slidesCircle[sliderIndex].style.display = 'none';
     
   }, 5000);
+
+  // при наведении
+  // function(e) {
+  //   const test   = document.getElementsByClassName('test')[0];
+  //   const test2 = document.getElementsByClassName('test2')[0];
+  //   const defaultColor = test2.style.backgroundColor;
+  //   test.addEventListener('mouseenter', function() {
+  //     test2.style.backgroundColor = 'red';
+  //   }, false);
+  // test.addEventListener('mouseleave', function() {
+  //   test2.style.backgroundColor = defaultColor;
+  // }, false);
+  // }
+
+  const heroArea = document.querySelector('.hero');
+
+  heroArea.addEventListener('mousemove', stopInterval(function() {
+    console.log('мышка в области блока hero');
+  }), false);
+
 
 });
