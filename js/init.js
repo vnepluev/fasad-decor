@@ -39,16 +39,28 @@ $(document).ready(function(){
   let sliderIndex = 0;
   const slides = document.querySelectorAll('.slider__items');
 
+  // для переключателей переменные
+  const slidesCircle = document.querySelectorAll('.slider-circle__svg');
+  const slidesCircleActive = document.querySelectorAll('.slider-circle__svg--active');
+  slidesCircleActive[0].style.display = 'flex';
+  slidesCircle[0].style.display = 'none';
+
   setInterval(function() {
 
     slides[sliderIndex].classList.remove('slider__items--visible');
+    slidesCircleActive[sliderIndex].style.display = 'none';
+    slidesCircle[sliderIndex].style.display = 'flex';
+
     sliderIndex++;
 
     if (sliderIndex+1 > slides.length) {
       sliderIndex = 0;
     } 
     slides[sliderIndex].classList.add('slider__items--visible');
+
+    slidesCircleActive[sliderIndex].style.display = 'flex';
+    slidesCircle[sliderIndex].style.display = 'none';
     
-  }, 6000);
+  }, 5000);
 
 });

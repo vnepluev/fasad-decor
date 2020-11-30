@@ -830,6 +830,8 @@ body {
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
   list-style: none;
+  max-height: 18px;
+  max-width: 18px;
 }
 
 .slider-circle__svg {
@@ -839,6 +841,8 @@ body {
 
 .slider-circle__svg--active {
   display: none;
+  width: 15px;
+  height: 15px;
 }
 
 .slider-circle__item {
