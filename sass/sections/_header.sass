@@ -199,14 +199,17 @@
         list-style: none
         max-height: 18px
         max-width: 18px
-        &__svg
-            width: 15px
-            height: 15px
-            &--active
-                display: none
-                width: 15px
-                height: 15px
         &__item
             padding-right: 26px
             &:last-child
                 padding-right: 0px
+
+// круглешки слайдера
+.slider-circle__svg
+    width: 15px
+    height: 15px
+    background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' id='slider' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Crect width='5' height='5' rx='2.5' transform='matrix(1 0 0 -1 5 10)' fill='%23D6B47E' fill-opacity='0.5'/%3E%3Cpath d='M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM0.13523 7.5C0.13523 11.5675 3.43255 14.8648 7.5 14.8648C11.5675 14.8648 14.8648 11.5675 14.8648 7.5C14.8648 3.43255 11.5675 0.13523 7.5 0.13523C3.43255 0.13523 0.13523 3.43255 0.13523 7.5Z' fill='%23D6B47E' fill-opacity='0.5'/%3E%3C/svg%3E");
+    &-active
+        width: 15px
+        height: 15px
+        background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' id='sliderhover' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Crect width='15' height='15' rx='7.5' transform='matrix(1 0 0 -1 0 15)' fill='%23D6B47E'/%3E%3Crect width='5' height='5' rx='2.5' transform='matrix(1 0 0 -1 5 10)' fill='%231A1A1A'/%3E%3Cpath d='M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM0.13523 7.5C0.13523 11.5675 3.43255 14.8648 7.5 14.8648C11.5675 14.8648 14.8648 11.5675 14.8648 7.5C14.8648 3.43255 11.5675 0.13523 7.5 0.13523C3.43255 0.13523 0.13523 3.43255 0.13523 7.5Z' fill='%23D6B47E' fill-opacity='0.5'/%3E%3C/svg%3E");

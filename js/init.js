@@ -32,54 +32,78 @@ $(document).ready(function(){
 		}
   });
 
-  //
-  // Слайдер для главной страницы
-  //
 
-  let sliderIndex = 0;
-  const slides = document.querySelectorAll('.slider__items');
+  const headerSection = document.querySelector('header');
+  const headerSlides = headerSection.querySelectorAll('.slider__items');
+  const heroSection = headerSection.querySelector('.hero');
+  const heroSliderPagination = headerSection.querySelector('.slider-circle')
+  const paginationBullets = headerSection.querySelectorAll('.slider-circle__svg');
 
-  // для переключателей переменные
-  const slidesCircle = document.querySelectorAll('.slider-circle__svg');
-  const slidesCircleActive = document.querySelectorAll('.slider-circle__svg--active');
-  slidesCircleActive[0].style.display = 'flex';
-  slidesCircle[0].style.display = 'none';
+  let currentSlide = 0;
+  let sliderInterval;
 
-  setInterval(function() {
-    slides[sliderIndex].classList.remove('slider__items--visible');
-    slidesCircleActive[sliderIndex].style.display = 'none';
-    slidesCircle[sliderIndex].style.display = 'flex';
+  function addInterval (ms) {
+    // записываем интревал в глобальную переменную чтобы иметь возможность 
+    // в разных частях программы его сбрасывать
+    // я это сделал через замыкания 
+    sliderInterval = setInterval(function() {
+      headerSlides[currentSlide].classList.remove('slider__items--visible');
+      currentSlide += 1;
 
-    sliderIndex++;
+      if (currentSlide + 1 > headerSlides.length) {
+        currentSlide = 0;
+      }
+      headerSlides[currentSlide].classList.add('slider__items--visible');
 
-    if (sliderIndex+1 > slides.length) {
-      sliderIndex = 0;
-    } 
-    slides[sliderIndex].classList.add('slider__items--visible');
+    }, ms);
+  }
 
-    slidesCircleActive[sliderIndex].style.display = 'flex';
-    slidesCircle[sliderIndex].style.display = 'none';
-    
-  }, 5000);
+  function deleteInterval (interval) {
+    clearInterval(interval);
+  }
 
-  // при наведении
-  // function(e) {
-  //   const test   = document.getElementsByClassName('test')[0];
-  //   const test2 = document.getElementsByClassName('test2')[0];
-  //   const defaultColor = test2.style.backgroundColor;
-  //   test.addEventListener('mouseenter', function() {
-  //     test2.style.backgroundColor = 'red';
-  //   }, false);
-  // test.addEventListener('mouseleave', function() {
-  //   test2.style.backgroundColor = defaultColor;
-  // }, false);
-  // }
+  addInterval(5000);
 
-  const heroArea = document.querySelector('.hero');
+  heroSection.addEventListener('mouseleave', () => addInterval(5000))
+  heroSection.addEventListener('mouseenter', () => deleteInterval(sliderInterval))
 
-  heroArea.addEventListener('mousemove', stopInterval(function() {
-    console.log('мышка в области блока hero');
-  }), false);
-
-
+// конструкция .forEach проходится по каждому элементу
+// который мы получили с помощью querySelectorAll
+// foreach принимает функцию и вызвает ее для каждого элемента
+  paginationBullets.forEach(function (bullet){
+    // в функцию колбэк мы передаем 1 элемент массива(массив булитов поэтому 
+    //в параметр функции пишем булит)
+    bullet.addEventListener('click', function (e) {
+      // так как foreach это по сути продвинутый цикл то мы на каждый элемент
+      // в цикле навешиваем обработчик события по клику,
+      // второй аргумент это функция которая принимает событие
+      deleteInterval(sliderInterval);
+      // останавливаем интервал после клика и отменяем действия браузера(так как там ссылка)
+      e.preventDefault();
+      // проверяем тот элемент на который кликнули 
+      // если он содержит активный класс то просто выходим из функции ничего не делая
+      if(this.classList.contains('slider-circle__svg-active')) return;
+      // если класса нету то:
+      // 1 - удаляем с текущего слайда класс который отвечает за его отображение 
+      headerSlides[currentSlide].classList.remove('slider-circle__svg');
+      // 2 - устанавливаем номер текущего слайда равный тому на какой булит нажали по счету
+      currentSlide = [...paginationBullets].indexOf(this);
+      // 3 - добавляем класс отображения тому слайду который соответствует булиту
+      // штука не надежная тут бы лучше получать номера каждого булита через data- атрибут 
+      // чтобы обезапаситься от неверного выбора слайда
+      headerSlides[currentSlide].classList.add('slider-circle__svg-active');
+      // тут мы находим на каком булите установлен активный класс и убираем его 
+      let currentBullet = heroSliderPagination.querySelector('.slider-circle__svg-active');
+      currentBullet.classList.remove('slider-circle__svg-active');
+      // тут присвиваем активный класс тому булиту на который кликнули
+      this.classList.add('slider-circle__svg-active');
+      /** можно сделать что то вроде таймера или еще одно событие повесить которое будет
+       * опять запускать интервал что-то вроде если нужно после клика по булиту 
+       * запускать таймер в данном примере слайды начнут опять переключаться через 10 секунд
+       * setTimeout(function() {
+       *    addInterval(5000);
+       * }, 5000)
+       */
+    })
+  })
 });
