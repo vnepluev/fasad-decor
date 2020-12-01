@@ -48,12 +48,14 @@ $(document).ready(function(){
     // я это сделал через замыкания 
     sliderInterval = setInterval(function() {
       headerSlides[currentSlide].classList.remove('slider__items--visible');
-      currentSlide += 1;
+      paginationBullets[currentSlide].classList.remove('is-active');
+      currentSlide++;
 
       if (currentSlide + 1 > headerSlides.length) {
         currentSlide = 0;
       }
       headerSlides[currentSlide].classList.add('slider__items--visible');
+      paginationBullets[currentSlide].classList.add('is-active');
 
     }, ms);
   }
@@ -72,33 +74,33 @@ $(document).ready(function(){
 // foreach принимает функцию и вызвает ее для каждого элемента
   paginationBullets.forEach(function (bullet){
     // в функцию колбэк мы передаем 1 элемент массива(массив булитов поэтому 
-    //в параметр функции пишем булит)
+    // в параметр функции пишем булит)
     bullet.addEventListener('click', function (e) {
-      // так как foreach это по сути продвинутый цикл то мы на каждый элемент
-      // в цикле навешиваем обработчик события по клику,
-      // второй аргумент это функция которая принимает событие
+      // так как foreach это по сути продвинутый цикл то мы на каждый элемент 
+      // в цикле навешиваем прослушиватель событий(или обработчик события) по клику, 
+      // второй аргумент это функция которая принимает событие 
       deleteInterval(sliderInterval);
       // останавливаем интервал после клика и отменяем действия браузера(так как там ссылка)
       e.preventDefault();
       // проверяем тот элемент на который кликнули 
       // если он содержит активный класс то просто выходим из функции ничего не делая
-      if(this.classList.contains('slider-circle__svg-active')) return;
+      if(this.classList.contains('is-active')) return;
       // если класса нету то:
       // 1 - удаляем с текущего слайда класс который отвечает за его отображение 
-      headerSlides[currentSlide].classList.remove('slider-circle__svg');
+      headerSlides[currentSlide].classList.remove('slider__items--visible');
       // 2 - устанавливаем номер текущего слайда равный тому на какой булит нажали по счету
       currentSlide = [...paginationBullets].indexOf(this);
       // 3 - добавляем класс отображения тому слайду который соответствует булиту
       // штука не надежная тут бы лучше получать номера каждого булита через data- атрибут 
       // чтобы обезапаситься от неверного выбора слайда
-      headerSlides[currentSlide].classList.add('slider-circle__svg-active');
+      headerSlides[currentSlide].classList.add('slider__items--visible');
       // тут мы находим на каком булите установлен активный класс и убираем его 
-      let currentBullet = heroSliderPagination.querySelector('.slider-circle__svg-active');
-      currentBullet.classList.remove('slider-circle__svg-active');
+      let currentBullet = heroSliderPagination.querySelector('.is-active');
+      currentBullet.classList.remove('is-active');
       // тут присвиваем активный класс тому булиту на который кликнули
-      this.classList.add('slider-circle__svg-active');
+      this.classList.add('is-active');
       /** можно сделать что то вроде таймера или еще одно событие повесить которое будет
-       * опять запускать интервал что-то вроде если нужно после клика по булиту 
+       * опять запускать интервал что-то вроде если нужно после кликак по булиту 
        * запускать таймер в данном примере слайды начнут опять переключаться через 10 секунд
        * setTimeout(function() {
        *    addInterval(5000);
@@ -106,4 +108,21 @@ $(document).ready(function(){
        */
     })
   })
+
+  //
+  // Добавляем навигацию стрелками
+  // arrow-right__link
+  const arrowLeft = document.querySelector('.arrow-left__link');
+
+  arrowLeft.addEventListener('click', function (e) {
+    deleteInterval(sliderInterval);
+    e.preventDefault();
+
+    currentSlide--;
+
+    if (currentSlide < 0) {
+      currentSlide = headerSlides.length - 1;
+    }
+
+  });
 });
