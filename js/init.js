@@ -113,16 +113,39 @@ $(document).ready(function(){
   // Добавляем навигацию стрелками
   // arrow-right__link
   const arrowLeft = document.querySelector('.arrow-left__link');
+  const arrowRight = document.querySelector('.arrow-right__link');
 
   arrowLeft.addEventListener('click', function (e) {
     deleteInterval(sliderInterval);
     e.preventDefault();
 
+    headerSlides[currentSlide].classList.remove('slider__items--visible');
+    
     currentSlide--;
 
     if (currentSlide < 0) {
       currentSlide = headerSlides.length - 1;
     }
+      headerSlides[currentSlide].classList.add('slider__items--visible');
+      let currentBullet = heroSliderPagination.querySelector('.is-active');
+      currentBullet.classList.remove('is-active');
+      paginationBullets[currentSlide].classList.add('is-active');
+  });
 
+  arrowRight.addEventListener('click', function (e) {
+    deleteInterval(sliderInterval);
+    e.preventDefault();
+
+    headerSlides[currentSlide].classList.remove('slider__items--visible');
+    
+    currentSlide++;
+
+    if (currentSlide + 1 > headerSlides.length) {
+      currentSlide =  0;
+    }
+      headerSlides[currentSlide].classList.add('slider__items--visible');
+      let currentBullet = heroSliderPagination.querySelector('.is-active');
+      currentBullet.classList.remove('is-active');
+      paginationBullets[currentSlide].classList.add('is-active');
   });
 });
