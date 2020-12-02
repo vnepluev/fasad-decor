@@ -3,8 +3,11 @@ $(document).ready(function () {
   let btnModal = document.querySelectorAll('.btn__link'); // получаем все кнопки заказать звонок
   let btnModal1 = document.querySelector('#callback-btn1');
   let modal = document.querySelector('#modal');
+  let modalConfidense = document.querySelector('#modal-confidense'); // модальное окно "политика конфиденциальности"
+  let modalConf = document.querySelector('#modal-conf'); // id ссылки
   // Кнопка закрытия модального окна
-  let btnClose = document.querySelector('#btn-modal-close'); 
+  let btnClose = document.querySelector('#btn-modal-close');
+  let btnClose1 = document.querySelector('#btn-modal-close1'); // закрытие модального окна
 
   // при клике на кнопку "Заказать обратный звонок"
   btnModal.forEach(function(item){
@@ -14,9 +17,12 @@ $(document).ready(function () {
     })
   })
 
-  // btnModal.addEventListener('click', function () {
-  //   modal.classList.add('modal-active');
-  // })
+  modalConf.addEventListener('click', function (e) {
+    e.preventDefault();
+    modalConfidense.classList.add('modal-active');
+    document.body.style.overflow = 'hidden';
+  })
+
   btnModal1.addEventListener('click', function (e) {
     e.preventDefault();
     modal.classList.add('modal-active');
@@ -30,6 +36,18 @@ $(document).ready(function () {
   $(document).keydown(function(e) {
     if (e.keyCode === 27) {
       modal.classList.remove('modal-active');
+      e.stopPropagation();
+		}
+  });
+
+  // закрытие модального окна "Политика конфиденциальности"
+  btnClose1.addEventListener('click', function () {
+    modalConfidense.classList.remove('modal-active');
+    document.body.style.overflow = 'visible';
+  })
+  $(document).keydown(function(e) {
+    if (e.keyCode === 27) {
+      modalConfidense.classList.remove('modal-active');
       e.stopPropagation();
 		}
   });
