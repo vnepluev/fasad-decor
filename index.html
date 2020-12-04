@@ -13,6 +13,43 @@
   <!-- Закрываем блок HEAD -->
 
   <body>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+      ym(70105444, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/70105444"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
     <!-- обертка для всего контента сайта -->
     <a id="header"></a>
     <div class="wrapper">
@@ -42,11 +79,11 @@
             </div>
             <!-- Телефон для связи -->
             <div class="header-block3">
-              <a href="tel:+79050224000" class="phone">
+              <a href="tel:+74993831002" class="phone">
                 <svg class="phone-icon">
                   <use xlink:href="img/icons.svg#phone"></use>
                 </svg>
-                8 800 300 00</a
+                +7(499)383-10-02</a
               >
             </div>
           </nav>
@@ -316,13 +353,13 @@
           <div class="project-slider-top">
             <div class="arrow-left project-slider__arrow-left">
               <!-- верхняя часть навигации слайдера -->
-              <a href="#" class="arrow-left__link">
+              <!-- <a href="#" class="arrow-left__link">
                 <img
                   class="arrow-left__img"
                   src="img/slider/left-arrow.png"
                   alt="<"
                 />
-              </a>
+              </a> -->
             </div>
             <div class="project-slider__items">
               <img
@@ -353,13 +390,13 @@
               />
             </div>
             <div class="arrow-right project-slider__arrow-right">
-              <a href="#" class="arrow-right__link">
+              <!-- <a href="#" class="arrow-right__link">
                 <img
                   class="arrow-right__img"
                   src="img/slider/right-arrow.png"
                   alt="<"
                 />
-              </a>
+              </a> -->
             </div>
             <!-- // конец верхнего слайдера -->
           </div>
@@ -470,14 +507,14 @@
         <div class="slider-nav">
           <!-- кнопки навигации для слайдера -->
           <ul class="slider-circle">
-            <li class="slider-circle__item">
+            <!-- <li class="slider-circle__item">
               <a href="#" class="slider-nav__link">
                 <svg class="slider-circle__svg">
                   <use xlink:href="img/icons.svg#slider"></use>
                 </svg>
               </a>
-            </li>
-            <li class="slider-circle__item">
+            </li> -->
+            <!-- <li class="slider-circle__item">
               <a href="#" class="slider-nav__link">
                 <svg class="slider-circle__svg">
                   <use xlink:href="img/icons.svg#sliderhover"></use>
@@ -497,7 +534,7 @@
                   <use xlink:href="img/icons.svg#slider"></use>
                 </svg>
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
 
@@ -784,11 +821,11 @@
             <div class="footer-right__contacts">
               <div class="footer-right__block">
                 <!-- Телефон -->
-                <a href="tel:+79050224000" class="footer__link">
+                <a href="tel:+74993831002" class="footer__link">
                   <svg class="footer-right__svg">
                     <use xlink:href="img/icons.svg#phone"></use>
                   </svg>
-                  +7(905)022-40-00 </a
+                  +7&nbsp;(499)&nbsp;383-10-02</a
                 ><br />
                 <!-- Mail -->
                 <a href="mailto:info@fasad-decor.ru" class="footer__link">
@@ -808,8 +845,9 @@
                 </a>
                 <!-- WhatsApp -->
                 <a
-                  href="https://api.whatsapp.com/send?phone=79050224000"
+                  href="https://api.whatsapp.com/send?phone=79673676155"
                   class="footer__link1"
+                  target="_blank"
                 >
                   <svg class="footer-right__svg1">
                     <use xlink:href="img/icons.svg#whatsapp"></use>
@@ -1145,7 +1183,28 @@
     </div>
 
     <!-- Подключаем скрипты -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="js/init.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      defer
+    ></script>
+    <script src="js/init.js" defer></script>
+    <!-- подключаем скрипт для svg IE 11 - переделать svg
+      <script src="js/svg4everybody.min.js" async></script>
+    <script>
+      svg4everybody();
+    </script> -->
   </body>
 </html>
+
+<!-- Bootstrap разрешение экрана
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } -->
