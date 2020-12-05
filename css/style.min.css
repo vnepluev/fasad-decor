@@ -826,6 +826,11 @@ body {
   opacity: 1;
 }
 
+.slider-img {
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+
 .slider-circle {
   display: -webkit-box;
   display: -webkit-flex;
@@ -883,6 +888,9 @@ body {
   }
   .header-block2__link {
     margin-right: 15px;
+  }
+  .steps {
+    width: 90%;
   }
 }
 
