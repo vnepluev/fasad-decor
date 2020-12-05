@@ -36,6 +36,7 @@ $(document).ready(function () {
   $(document).keydown(function(e) {
     if (e.keyCode === 27) {
       modal.classList.remove('modal-active');
+      document.body.style.overflow = 'visible';
       e.stopPropagation();
 		}
   });
@@ -48,6 +49,7 @@ $(document).ready(function () {
   $(document).keydown(function(e) {
     if (e.keyCode === 27) {
       modalConfidense.classList.remove('modal-active');
+      document.body.style.overflow = 'visible';
       e.stopPropagation();
 		}
   });
@@ -168,4 +170,34 @@ $(document).ready(function () {
       currentBullet.classList.remove('is-active');
       paginationBullets[currentSlide].classList.add('is-active');
   });
+
+  //
+  // Отзывы - увеличиваем при наведении
+  //
+  $(".review-block__image").click(function(){	// Событие клика на маленькое изображение
+	  let img = $(this);	// Получаем изображение, на которое кликнули
+    let src = img.attr('src'); // Достаем из этого изображения путь до картинки
+    document.body.style.overflow = 'hidden';
+		$("body").append("<div class='review__popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+						 "<div class='review__popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+						 "<img src='"+src+"' class='review__popup_img' />"+ // Само увеличенное фото
+						 "</div>"); 
+    $(".review__popup").fadeIn(800); // Медленно выводим изображение
+    $(".review__popup_bg").click(function () {	// Событие клика на затемненный фон
+      document.body.style.overflow = 'visible';
+			$(".review__popup").fadeOut(800);	// Медленно убираем всплывающее окно
+			setTimeout(function() {	// Выставляем таймер
+			  $(".review__popup").remove(); // Удаляем разметку всплывающего окна
+			}, 800);
+    });
+    $(document).keydown(function(e) {
+      if (e.keyCode === 27) {
+        document.body.style.overflow = 'visible';
+	  		$(".review__popup").fadeOut(800);	// Медленно убираем всплывающее окно
+		  	setTimeout(function() {	// Выставляем таймер
+			    $(".review__popup").remove(); // Удаляем разметку всплывающего окна
+			  }, 800);
+		  }
+  })
+	});
 });
