@@ -88,8 +88,11 @@ $(document).ready(function () {
 
   addInterval(5000);
 
-  heroSection.addEventListener('mouseleave', () => addInterval(5000))
-  heroSection.addEventListener('mouseenter', () => deleteInterval(sliderInterval))
+  // heroSection.addEventListener('mouseleave', () => addInterval(5000));
+  // heroSection.addEventListener('mouseenter', () => deleteInterval(sliderInterval));
+
+  heroSection.addEventListener('mouseleave', function() { addInterval(5000) })
+  heroSection.addEventListener('mouseenter', function() { deleteInterval(sliderInterval) })
 
 // конструкция .forEach проходится по каждому элементу
 // который мы получили с помощью querySelectorAll
