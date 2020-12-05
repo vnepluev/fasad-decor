@@ -11,25 +11,28 @@
             z-index: 1
             object-fit: cover
         &__text1
-            padding: 25px 20px 0 61px
+            padding: 25px 20px 0 60px
         &__block2
             display: flex
             position: relative
             left: 368px
             top: -60px
+        &__block3
+            min-height: 560px  // высота 3 скрытого блока
         &__img2
             border-radius: 10px
             box-shadow: 0px 0px 22px $bg-catalog-color
             z-index: 0
         &__text2
-            padding: 25px 20px 25px 61px
-            // background: linear-gradient( rgba(245, 242, 242, 0.24), $background-color )
-        // затемнение к низу блока
+            padding: 25px 20px 0px 60px
+            margin-right: 10px
     &-hover
         max-height: 630px
         overflow: hidden
         position: relative
         background: url('../img/bg-fon.png') center right no-repeat
+        &--active
+            max-height: none // делаем высоту блока по контенту
         &::after
             position: absolute
             content: ''
@@ -48,3 +51,6 @@
         &__svg
             width: 15px
             height: 16px
+
+.production-slider
+    text-align: center

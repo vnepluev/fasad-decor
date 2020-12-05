@@ -921,7 +921,7 @@ body {
 }
 
 .production-content__text1 {
-  padding: 25px 20px 0 61px;
+  padding: 25px 20px 0 60px;
 }
 
 .production-content__block2 {
@@ -934,6 +934,10 @@ body {
   top: -60px;
 }
 
+.production-content__block3 {
+  min-height: 560px;
+}
+
 .production-content__img2 {
   -webkit-border-radius: 10px;
           border-radius: 10px;
@@ -943,7 +947,8 @@ body {
 }
 
 .production-content__text2 {
-  padding: 25px 20px 25px 61px;
+  padding: 25px 20px 0px 60px;
+  margin-right: 10px;
 }
 
 .production-hover {
@@ -951,6 +956,10 @@ body {
   overflow: hidden;
   position: relative;
   background: url("../img/bg-fon.png") center right no-repeat;
+}
+
+.production-hover--active {
+  max-height: none;
 }
 
 .production-hover::after {
@@ -982,6 +991,10 @@ body {
 .production-button__svg {
   width: 15px;
   height: 16px;
+}
+
+.production-slider {
+  text-align: center;
 }
 
 .project {

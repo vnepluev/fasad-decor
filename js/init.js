@@ -202,5 +202,18 @@ $(document).ready(function () {
 			  }, 800);
 		  }
   })
-	});
+  });
+  
+  //
+  // О производстве - по клике на кнопку подробнее
+  //
+  const btnProduction = document.querySelectorAll('.production-hover');
+  $(".extremum-click").click(function (e) {
+    e.preventDefault();
+    if (btnProduction[0].classList.contains('production-hover--active')) {
+      btnProduction[0].classList.remove('production-hover--active');
+    } else {
+      btnProduction[0].classList.add('production-hover--active');
+    }
+   });
 });
