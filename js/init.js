@@ -8,7 +8,7 @@ $(document).ready(function () {
   // Кнопка закрытия модального окна
   let btnClose = document.querySelector('#btn-modal-close');
   let btnClose1 = document.querySelector('#btn-modal-close1'); // закрытие модального окна
-
+  
   // при клике на кнопку "Заказать обратный звонок"
   btnModal.forEach(function(item){
     item.addEventListener('click', function () {
@@ -114,7 +114,8 @@ $(document).ready(function () {
       // 1 - удаляем с текущего слайда класс который отвечает за его отображение 
       headerSlides[currentSlide].classList.remove('slider__items--visible');
       // 2 - устанавливаем номер текущего слайда равный тому на какой булит нажали по счету
-      currentSlide = [...paginationBullets].indexOf(this);
+      // currentSlide = [...paginationBullets].indexOf(this);
+      currentSlide = [].slice.call(paginationBullets).indexOf(this);
       // 3 - добавляем класс отображения тому слайду который соответствует булиту
       // штука не надежная тут бы лучше получать номера каждого булита через data- атрибут 
       // чтобы обезапаситься от неверного выбора слайда

@@ -940,6 +940,8 @@ body {
 }
 
 .production-content__img2 {
+  min-width: 635px;
+  height: 311px;
   -webkit-border-radius: 10px;
           border-radius: 10px;
   -webkit-box-shadow: 0px 0px 22px #282828;
@@ -948,8 +950,8 @@ body {
 }
 
 .production-content__text2 {
-  padding: 25px 20px 0px 60px;
-  margin-right: 10px;
+  padding: 0px 20px 0px 60px;
+  margin-right: 300px;
 }
 
 .production-hover {
