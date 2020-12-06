@@ -181,31 +181,31 @@ $(document).ready(function () {
 	  let img = $(this);	// Получаем изображение, на которое кликнули
     let src = img.attr('src'); // Достаем из этого изображения путь до картинки
     document.body.style.overflow = 'hidden';
-		$("body").append("<div class='review__popup'>"+ //Добавляем в тело документа разметку всплывающего окна
-						 "<div class='review__popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
-						 "<img src='"+src+"' class='review__popup_img' />"+ // Само увеличенное фото
+		$("body").append("<div class='fadeimg__popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+						 "<div class='fadeimg__popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+						 "<img src='"+src+"' class='fadeimg__popup_img' />"+ // Само увеличенное фото
 						 "</div>"); 
-    $(".review__popup").fadeIn(800); // Медленно выводим изображение
-    $(".review__popup_bg").click(function () {	// Событие клика на затемненный фон
+    $(".fadeimg__popup").fadeIn(800); // Медленно выводим изображение
+    $(".fadeimg__popup_bg").click(function () {	// Событие клика на затемненный фон
       document.body.style.overflow = 'visible';
-			$(".review__popup").fadeOut(800);	// Медленно убираем всплывающее окно
+			$(".fadeimg__popup").fadeOut(800);	// Медленно убираем всплывающее окно
 			setTimeout(function() {	// Выставляем таймер
-			  $(".review__popup").remove(); // Удаляем разметку всплывающего окна
+			  $(".fadeimg__popup").remove(); // Удаляем разметку всплывающего окна
 			}, 800);
     });
     $(document).keydown(function(e) {
       if (e.keyCode === 27) {
         document.body.style.overflow = 'visible';
-	  		$(".review__popup").fadeOut(800);	// Медленно убираем всплывающее окно
+	  		$(".fadeimg__popup").fadeOut(800);	// Медленно убираем всплывающее окно
 		  	setTimeout(function() {	// Выставляем таймер
-			    $(".review__popup").remove(); // Удаляем разметку всплывающего окна
+			    $(".fadeimg__popup").remove(); // Удаляем разметку всплывающего окна
 			  }, 800);
 		  }
   })
   });
   
   //
-  // О производстве - по клике на кнопку подробнее
+  // О производстве - по клику на кнопку подробнее
   //
   const btnProduction = document.querySelectorAll('.production-hover');
   $(".extremum-click").click(function (e) {
@@ -215,5 +215,35 @@ $(document).ready(function () {
     } else {
       btnProduction[0].classList.add('production-hover--active');
     }
-   });
+  });
+  
+    //
+  // Отзывы - увеличиваем при наведении
+  //
+  $(".production-slider__img").click(function(){	// Событие клика на маленькое изображение
+	  let img = $(this);	// Получаем изображение, на которое кликнули
+    let src = img.attr('src'); // Достаем из этого изображения путь до картинки
+    document.body.style.overflow = 'hidden';
+		$("body").append("<div class='fadeimg__popup'>"+ //Добавляем в тело документа разметку всплывающего окна
+						 "<div class='fadeimg__popup_bg'></div>"+ // Блок, который будет служить фоном затемненным
+						 "<img src='"+src+"' class='fadeimg__popup_img' />"+ // Само увеличенное фото
+						 "</div>"); 
+    $(".fadeimg__popup").fadeIn(800); // Медленно выводим изображение
+    $(".fadeimg__popup_bg").click(function () {	// Событие клика на затемненный фон
+      document.body.style.overflow = 'visible';
+			$(".fadeimg__popup").fadeOut(800);	// Медленно убираем всплывающее окно
+			setTimeout(function() {	// Выставляем таймер
+			  $(".fadeimg__popup").remove(); // Удаляем разметку всплывающего окна
+			}, 800);
+    });
+    $(document).keydown(function(e) {
+      if (e.keyCode === 27) {
+        document.body.style.overflow = 'visible';
+	  		$(".fadeimg__popup").fadeOut(800);	// Медленно убираем всплывающее окно
+		  	setTimeout(function() {	// Выставляем таймер
+			    $(".fadeimg__popup").remove(); // Удаляем разметку всплывающего окна
+			  }, 800);
+		  }
+  })
+  });
 });
