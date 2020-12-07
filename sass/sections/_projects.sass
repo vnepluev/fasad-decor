@@ -15,7 +15,7 @@
 
 // основное тело слайда
 .project-content
-    margin: 70px 0 70px
+    margin: 70px 0 0px
     &__img
         min-width: 540px
         height: 340px
@@ -37,4 +37,15 @@
         padding: 20px 10px 20px 127px
     &-list
         display: flex
+        position: relative
         justify-content: space-between
+        flex-direction: column
+        list-style: none
+        margin-bottom: 450px
+    &-list__item
+        display: none
+        position: absolute
+        left: 0
+        top: 0
+        &-visible
+            display: flex

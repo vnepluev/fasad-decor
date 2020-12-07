@@ -1040,7 +1040,7 @@ body {
 }
 
 .project-content {
-  margin: 70px 0 70px;
+  margin: 70px 0 0px;
 }
 
 .project-content__img {
@@ -1079,10 +1079,32 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  margin-bottom: 450px;
+}
+
+.project-content-list__item {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.project-content-list__item-visible {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .review {

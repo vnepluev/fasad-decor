@@ -218,7 +218,7 @@ $(document).ready(function () {
     }
   });
   
-    //
+  //
   // Отзывы - увеличиваем при наведении
   //
   $(".production-slider__img").click(function(){	// Событие клика на маленькое изображение
@@ -247,4 +247,30 @@ $(document).ready(function () {
 		  }
   })
   });
+
+  //
+  // Секция выполненные работы
+  //
+  //const headerSection = document.querySelector('header');
+  
+  $("#project-nav__img1").click(function() {
+    $(".project-content-list__item-visible").removeClass('project-content-list__item-visible');
+    $("#project-content-list__item1").addClass('project-content-list__item-visible');
+  })
+
+  $("#project-nav__img2").click(function() {
+    $(".project-content-list__item-visible").removeClass('project-content-list__item-visible');
+    $("#project-content-list__item2").addClass('project-content-list__item-visible');
+  })
+
+  $("#project-nav__img3").click(function() {
+    $(".project-content-list__item-visible").removeClass('project-content-list__item-visible');
+    $("#project-content-list__item3").addClass('project-content-list__item-visible');
+  })
+
+  $("#project-nav__img4").click(function() {
+    $(".project-content-list__item-visible").removeClass('project-content-list__item-visible');
+    $("#project-content-list__item4").addClass('project-content-list__item-visible');
+  })
+  
 });
