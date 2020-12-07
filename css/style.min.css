@@ -696,6 +696,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: default;
 }
 
 .steps-block__number {
@@ -1012,14 +1013,11 @@ body {
 
 .project {
   margin: 67px auto;
+  background: url("../img/bg-fon.png") center center no-repeat;
 }
 
-.project-slider {
+.project-nav {
   margin-top: 59px;
-}
-
-.project-slider-top {
-  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1028,30 +1026,55 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 59px;
-  min-width: 1113px;
 }
 
-.project-slider__img {
+.project-nav__img {
   -webkit-border-radius: 10px;
           border-radius: 10px;
 }
 
-.project-slider__img:hover {
+.project-nav__img:hover {
   -webkit-box-shadow: 0px 0px 22px rgba(214, 180, 126, 0.51);
           box-shadow: 0px 0px 22px rgba(214, 180, 126, 0.51);
   cursor: pointer;
 }
 
-.project-slider__arrow-left {
-  top: 35px;
+.project-content {
+  margin: 70px 0 70px;
 }
 
-.project-slider__arrow-right {
-  top: 35px;
+.project-content__img {
+  min-width: 540px;
+  height: 340px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
 }
 
-.project-slider-bottom {
+.project-content__block {
+  position: relative;
+}
+
+.project-content__block::after {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #1a1a1a));
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #1a1a1a 75%);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), #1a1a1a 75%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #1a1a1a 75%);
+}
+
+.project-content__text {
+  height: 385px;
+  overflow-y: auto;
+  padding: 20px 10px 20px 127px;
+}
+
+.project-content-list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1060,23 +1083,6 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 70px;
-}
-
-.project-slider-left__img {
-  -webkit-border-radius: 10px;
-          border-radius: 10px;
-}
-
-.project-slider__text {
-  padding: 20px 10px 20px 127px;
-}
-
-.project-slider__right {
-  position: relative;
-  padding-right: 20px;
-  overflow-y: auto;
-  max-height: 400px;
 }
 
 .review {
