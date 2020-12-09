@@ -4,11 +4,13 @@
 
 // навигация - 4 верхних слайда
 .project-nav
-    margin-top: 59px
+    margin-top: 9px
     display: flex
-    justify-content: space-between
+    justify-content: center
+    flex-wrap: wrap
     &__img
         border-radius: 10px
+        margin: 20px
         &:hover
             box-shadow: 0px 0px 22px $btn-hover-boxshadow1
             cursor: pointer
@@ -51,3 +53,12 @@
         top: 0
         &-visible
             display: flex
+
+@media (max-width: 1290px)
+    .project-content
+        &__text
+            padding: 20px 10px 20px 25px
+    .project-nav
+        &__img
+            margin-right: 100px
+            padding-bottom: 0px

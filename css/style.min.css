@@ -865,12 +865,18 @@ body {
   background-image: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' id='sliderhover' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Crect width='15' height='15' rx='7.5' transform='matrix(1 0 0 -1 0 15)' fill='%23D6B47E'/%3E%3Crect width='5' height='5' rx='2.5' transform='matrix(1 0 0 -1 5 10)' fill='%231A1A1A'/%3E%3Cpath d='M15 7.5C15 11.6421 11.6421 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5ZM0.13523 7.5C0.13523 11.5675 3.43255 14.8648 7.5 14.8648C11.5675 14.8648 14.8648 11.5675 14.8648 7.5C14.8648 3.43255 11.5675 0.13523 7.5 0.13523C3.43255 0.13523 0.13523 3.43255 0.13523 7.5Z' fill='%23D6B47E' fill-opacity='0.5'/%3E%3C/svg%3E");
 }
 
-@media (max-width: 1415px) {
+@media (max-width: 1440px) {
+  .wrapper {
+    max-width: 1390px;
+  }
+  .content-size {
+    max-width: 1290px;
+  }
   .slider-container {
     width: 90%;
   }
   .slider-img {
-    width: 600px;
+    width: 500px;
   }
   .arrow-right {
     right: 3%;
@@ -884,6 +890,9 @@ body {
   .header-block3 {
     margin-right: 15px;
   }
+  .hero {
+    min-height: 430px;
+  }
   .hero__right {
     margin-left: 15px;
   }
@@ -892,6 +901,59 @@ body {
   }
   .steps {
     width: 90%;
+  }
+  .header-block1__logo {
+    display: unset;
+  }
+  .header-block1__text::after {
+    display: unset;
+  }
+  .btn {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 1290px) {
+  .wrapper {
+    max-width: 1089px;
+    margin-left: 20px;
+  }
+  .content-size {
+    max-width: 989px;
+  }
+  .header-block1__logo {
+    display: none;
+  }
+  .header-block1__text::after {
+    display: none;
+  }
+  .h1-title {
+    font-size: 20px;
+    line-height: 32px;
+  }
+  .p-text {
+    line-height: 25px;
+  }
+  .header-block2__link, .phone {
+    font-size: 16px;
+  }
+  .header-block1__link {
+    font-size: 18px;
+  }
+  .btn__link {
+    font-size: 16px;
+  }
+  .steps-block__number {
+    font-size: 26px;
+  }
+  .steps-block__text {
+    font-size: 14px;
+  }
+  .hero {
+    min-height: 400px;
+  }
+  .steps {
+    width: 95%;
   }
 }
 
@@ -1011,26 +1073,56 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1440px) {
+  .h2-title {
+    font-size: 20px;
+  }
+  .production-content__text1, .production-content__text2 {
+    padding: 30px 20px 0;
+    margin-left: 30px;
+  }
+  .production-content__img1 {
+    width: 560px;
+    margin-right: 20px;
+  }
+  .production-content__block1 {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .production-content__block2 {
+    position: static;
+    display: block;
+  }
+  .production-content__img2 {
+    width: auto;
+    height: 290px;
+  }
+}
+
 .project {
   margin: 67px auto;
   background: url("../img/bg-fon.png") center center no-repeat;
 }
 
 .project-nav {
-  margin-top: 59px;
+  margin-top: 9px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 
 .project-nav__img {
   -webkit-border-radius: 10px;
           border-radius: 10px;
+  margin: 20px;
 }
 
 .project-nav__img:hover {
@@ -1111,6 +1203,16 @@ body {
   display: flex;
 }
 
+@media (max-width: 1290px) {
+  .project-content__text {
+    padding: 20px 10px 20px 25px;
+  }
+  .project-nav__img {
+    margin-right: 100px;
+    padding-bottom: 0px;
+  }
+}
+
 .review {
   margin: 67px auto;
   background: url("../img/bg-fon.png") center center no-repeat;
@@ -1141,6 +1243,12 @@ body {
           border-radius: 15px;
   cursor: pointer;
   width: 350px;
+}
+
+@media (max-width: 1290px) {
+  .review-block__image {
+    width: 260px;
+  }
 }
 
 .catalog {
@@ -1441,6 +1549,12 @@ body {
 
 .footer__map {
   border: none;
+}
+
+@media (max-width: 1290px) {
+  .footer__map {
+    max-width: 580px;
+  }
 }
 
 .modal {

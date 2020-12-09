@@ -222,11 +222,15 @@
 //
 // Адаптивная версия
 //
-@media (max-width: 1415px)
+@media (max-width: 1440px)
+    .wrapper
+        max-width: 1390px
+    .content-size
+        max-width: 1290px
     .slider-container
         width: 90%
     .slider-img
-        width: 600px
+        width: 500px
     .arrow-right
         right: 3%
     .arrow-left
@@ -235,9 +239,49 @@
         margin-left: 15px
     .header-block3
         margin-right: 15px
+    .hero
+        min-height: 430px
     .hero__right
         margin-left: 15px
     .header-block2__link
         margin-right: 15px
     .steps
         width: 90%
+    .header-block1__logo
+        display: unset
+    .header-block1__text
+        &::after
+            display: unset
+    .btn
+        margin-top: 25px
+
+@media (max-width: 1290px)
+    .wrapper
+        max-width: 1089px
+        margin-left: 20px
+    .content-size
+        max-width: 989px
+    .header-block1__logo
+        display: none
+    .header-block1__text
+        &::after
+            display: none
+    .h1-title
+        font-size: 20px
+        line-height: 32px
+    .p-text
+        line-height: 25px
+    .header-block2__link, .phone
+        font-size: 16px
+    .header-block1__link
+        font-size: 18px
+    .btn__link
+        font-size: 16px
+    .steps-block__number
+        font-size: 26px
+    .steps-block__text
+        font-size: 14px
+    .hero
+        min-height: 400px
+    .steps
+        width: 95%
