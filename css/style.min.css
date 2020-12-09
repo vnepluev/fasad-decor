@@ -1074,6 +1074,10 @@ body {
   padding: 20px 10px 20px 127px;
 }
 
+.project-content__text--padding {
+  padding: 20px 10px 20px 0;
+}
+
 .project-content-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1485,6 +1489,17 @@ body {
 .popup__img {
   -webkit-border-radius: 20px;
           border-radius: 20px;
+}
+
+.popup__img--catalog {
+  margin: 100px;
+}
+
+.popup__title {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  text-decoration: none;
 }
 
 .popup-content {

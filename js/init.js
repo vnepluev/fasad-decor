@@ -251,7 +251,6 @@ $(document).ready(function () {
   //
   // Секция выполненные работы
   //
-  //const headerSection = document.querySelector('header');
   
   $("#project-nav__img1").click(function() {
     $(".project-content-list__item-visible").removeClass('project-content-list__item-visible');
@@ -272,5 +271,53 @@ $(document).ready(function () {
     $(".project-content-list__item-visible").removeClass('project-content-list__item-visible');
     $("#project-content-list__item4").addClass('project-content-list__item-visible');
   })
-  
+
+  //
+  // Секция каталог товара
+  //
+  $("#catalog-items__link1").click(function () {
+    $("#modal-catalog1").addClass('modal-active');
+    document.body.style.overflow = 'hidden';
+    return false;
+  })
+  $("#catalog-items__link2").click(function () {
+    $("#modal-catalog2").addClass('modal-active');
+    document.body.style.overflow = 'hidden';
+    return false;
+  })
+  $("#catalog-items__link3").click(function () {
+    $("#modal-catalog3").addClass('modal-active');
+    document.body.style.overflow = 'hidden';
+    return false;
+  })
+  $("#catalog-items__link4").click(function () {
+    $("#modal-catalog4").addClass('modal-active');
+    document.body.style.overflow = 'hidden';
+    return false;
+  })
+  $("#catalog-items__link5").click(function () {
+    $("#modal-catalog5").addClass('modal-active');
+    document.body.style.overflow = 'hidden';
+    return false;
+  })
+  $("#catalog-items__link6").click(function () {
+    $("#modal-catalog6").addClass('modal-active');
+    document.body.style.overflow = 'hidden';
+    return false;
+  })
+
+  $(".popup__close").click(function() {
+    $(".modal").removeClass('modal-active');
+    document.body.style.overflow = 'visible';
+    return false;
+  })
+
+  $(document).keydown(function(e) {
+    if (e.keyCode === 27) {
+      $(".modal").removeClass('modal-active');
+      document.body.style.overflow = 'visible';
+      e.stopPropagation();
+		}
+  });
+
 });
