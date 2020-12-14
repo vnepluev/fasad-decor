@@ -619,6 +619,10 @@ body {
   letter-spacing: 0.05em;
 }
 
+.phone-text {
+  display: inline;
+}
+
 .phone:hover {
   font-weight: bold;
   -webkit-transition: 0.6s;
@@ -957,6 +961,40 @@ body {
   }
 }
 
+@media (max-width: 900px) {
+  .slider-img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 60px 0 0;
+  }
+  .arrow-right, .arrow-left {
+    display: none;
+  }
+  .slider-container, .steps {
+    width: 98%;
+  }
+  .steps-block__text {
+    font-size: 12px;
+  }
+  .steps-block__number {
+    font-size: 24px;
+  }
+  .phone-text {
+    display: none;
+  }
+  .phone-icon {
+    width: 18px;
+    height: 18px;
+  }
+  .header-block3 {
+    margin-right: 5px;
+  }
+}
+
 .production {
   margin-top: 60px;
   position: relative;
@@ -1213,6 +1251,25 @@ body {
   }
 }
 
+@media (max-width: 790px) {
+  .project {
+    margin: 55px 0 0;
+  }
+  .project-content__img {
+    min-width: 420px;
+    height: 264px;
+  }
+  .project-content__text {
+    height: 320px;
+  }
+  .project-content-list {
+    margin-bottom: 380px;
+  }
+  .project-nav__img {
+    margin-right: 30px;
+  }
+}
+
 .review {
   margin: 67px auto;
   background: url("../img/bg-fon.png") center center no-repeat;
@@ -1248,6 +1305,12 @@ body {
 @media (max-width: 1290px) {
   .review-block__image {
     width: 260px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .review-block__image {
+    width: 220px;
   }
 }
 
@@ -1367,6 +1430,13 @@ body {
   outline: none;
 }
 
+@media (max-width: 1200px) {
+  .catalog-items__block {
+    width: 310px;
+    padding: 20px;
+  }
+}
+
 .schema {
   margin: 67px auto;
 }
@@ -1469,6 +1539,24 @@ body {
   cursor: default;
 }
 
+@media (max-width: 900px) {
+  .schema {
+    margin: 40px auto;
+  }
+  .schema-section__block1 {
+    width: 200px;
+    padding: 15px 30px;
+  }
+  .schema-section__block2 {
+    width: 25px;
+  }
+  .schema-section__block3 {
+    width: 80%;
+    padding: 30px 0;
+    margin-right: 5px;
+  }
+}
+
 .footer {
   margin: 67px auto;
 }
@@ -1554,6 +1642,18 @@ body {
 @media (max-width: 1290px) {
   .footer__map {
     max-width: 580px;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    margin: 40px auto;
+  }
+  .footer__map {
+    max-width: 440px;
+  }
+  .footer-bottom {
+    padding: 0 10px;
   }
 }
 
